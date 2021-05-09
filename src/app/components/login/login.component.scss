@@ -1,0 +1,13 @@
+.card-body {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.btn-link {
+  padding: 0;
+  transform: translateY(-2px);
+  &:hover {
+    opacity: .85;
+  }
+}
+

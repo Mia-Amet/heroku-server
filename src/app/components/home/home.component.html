@@ -1,0 +1,28 @@
+<!--<p>{{ ( users$ | async ) | join: 'name' }}</p>-->
+<div class="alert alert-info" *myIf="!(users$ | async)?.length">Users not found</div>
+<!-- /.alert -->
+<table class="table table-hover border-light">
+  <thead class="table-light text-secondary">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Company name</th>
+      <th class="col-2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="align-middle" *myFor="let user of ( users$ | async ); index as i">
+      <th>{{ i + 1 }}</th>
+      <td>{{ user.name | myslice }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.company.name }}</td>
+      <td class="d-flex justify-content-end">
+        <button class="btn btn-info btn-sm text-white" (click)="onEdit(user.id)">Edit</button>
+        <button class="btn btn-warning btn-sm text-white" (click)="onDelete(user.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,31 @@
+i {
+  transform: translateY(3px);
+}
+
+li {
+  cursor: pointer;
+  padding: 4px;
+  border-color: #6c648b;
+}
+
+li {
+  a {
+    color: rgba(255, 255, 255, 0.55);
+  }
+  &:hover {
+    a {
+      color: white;
+    }
+  }
+}
+
+.navbar-brand {
+  margin-right: 2rem !important;
+}
+
+.position-absolute {
+  top: 64px;
+  right: 71px;
+  width: 158px;
+  background-color: lighten(#6c648b, 10%);
+}

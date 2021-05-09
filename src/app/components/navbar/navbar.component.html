@@ -1,0 +1,32 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container">
+    <div class="d-flex">
+      <a href="#" class="navbar-brand text-light">{{ brand }}</a>
+      <div class="navbar-expand" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a class="text-white nav-link" *ngIf="userEmail" (click)="userDropdown = !userDropdown">
+      {{ userEmail || '' }}
+      <i class="pi" [ngClass]="{ 'pi-angle-down': !userDropdown, 'pi-angle-up': userDropdown }"></i>
+    </a>
+  </div>
+  <div class="position-absolute d-flex" *ngIf="userDropdown">
+    <ul class="list-group list-group-flush w-100">
+      <li class="list-group-item bg-transparent">
+        <a class="btn btn-link" (click)="navigateAccount()">Account</a>
+      </li>
+      <li class="list-group-item bg-transparent">
+        <a class="btn btn-link" (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
+    <!-- /.list-group -->
+  </div>
+</nav>

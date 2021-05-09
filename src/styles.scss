@@ -1,0 +1,45 @@
+/* ==========================================================================
+   GLOBAL SETTINGS
+   ========================================================================== */
+/**
+ * COLORS
+ */
+
+/* Bootstrap utilities */
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+/* Overwritten theme colors */
+$primary: #6c648b;
+$danger: #e27d60;
+$warning: #fba100;
+$info: #6bbaa7;
+$secondary: #b6a19e;
+
+$theme-colors: (
+  primary: #6c648b,
+  danger: #e27d60,
+  warning: #fba100,
+  info: #6bbaa7,
+  secondary: #b6a19e,
+);
+
+/* Bootstrap base styles */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+label {
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+
+.btn-lg {
+  margin-top: 30px;
+  margin-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.btn-link {
+  text-decoration: none;
+}
